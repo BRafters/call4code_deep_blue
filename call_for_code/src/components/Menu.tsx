@@ -12,7 +12,7 @@ import {
 
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { helpOutline, helpSharp, bugOutline, bugSharp, cloudOutline, cloudSharp, chatboxOutline, chatboxSharp, bookmarkOutline, medkitSharp, medkitOutline, pulseOutline, pulseSharp } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -21,47 +21,54 @@ interface AppPage {
   mdIcon: string;
   title: string;
 }
+interface Label{
+  url: string;
+  iosIcon: string;
+  mdIcon: string;
+  title: string;
+}
 
 const appPages: AppPage[] = [
   {
-    title: 'Inbox',
-    url: '/page/Inbox',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
+    title: 'First Aid Steps',
+    url: '/page/First Aid Steps',
+    iosIcon: medkitOutline,
+    mdIcon: medkitSharp
   },
   {
-    title: 'Outbox',
-    url: '/page/Outbox',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp
+    title: 'Survival Tips',
+    url: '/page/Survival Tips',
+    iosIcon: pulseOutline,
+    mdIcon: pulseSharp
   },
   {
-    title: 'Favorites',
-    url: '/page/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
+    title: 'Ask the Assistant',
+    url: '/page/Assistant',
+    iosIcon: chatboxOutline,
+    mdIcon: chatboxSharp
   },
   {
-    title: 'Archived',
-    url: '/page/Archived',
-    iosIcon: archiveOutline,
-    mdIcon: archiveSharp
-  },
-  {
-    title: 'Trash',
-    url: '/page/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp
-  },
-  {
-    title: 'Spam',
-    url: '/page/Spam',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp
+    title: 'Local Weather',
+    url: '/page/Weather',
+    iosIcon: cloudOutline,
+    mdIcon: cloudSharp
   }
 ];
 
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+const labels: Label[] = [
+  {
+    title: 'Report Bug',
+    url: '/page/Report Bug',
+    iosIcon: bugOutline,
+    mdIcon: bugSharp
+  },
+  {
+    title: 'FAQ',
+    url: '/page/FAQ',
+    iosIcon: helpOutline,
+    mdIcon: helpSharp
+  }
+];
 
 const Menu: React.FC = () => {
   const location = useLocation();
@@ -70,7 +77,7 @@ const Menu: React.FC = () => {
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-        <IonListHeader>Menu</IonListHeader>
+        <IonListHeader className="ion-margin-bottom">Menu</IonListHeader>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
@@ -84,13 +91,17 @@ const Menu: React.FC = () => {
         </IonList>
 
         <IonList id="labels-list">
-          <IonListHeader>Labels</IonListHeader>
-          {labels.map((label, index) => (
-            <IonItem lines="none" key={index}>
-              <IonIcon slot="start" icon={bookmarkOutline} />
-              <IonLabel>{label}</IonLabel>
-            </IonItem>
-          ))}
+          <IonListHeader>Support</IonListHeader>
+          {labels.map((label, index) => {
+            return (
+              <IonMenuToggle key={index} autoHide={false}>
+                <IonItem className={location.pathname === label.url ? 'selected' : ''} routerLink={label.url} routerDirection="none" lines="none" detail={false}>
+                  <IonIcon slot="start" ios={label.iosIcon} md={label.mdIcon} />
+                  <IonLabel>{label.title}</IonLabel>
+                </IonItem>
+              </IonMenuToggle>
+            );
+            })}
         </IonList>
       </IonContent>
     </IonMenu>
