@@ -1,0 +1,7 @@
+{
+  "name": "call_for_code",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
