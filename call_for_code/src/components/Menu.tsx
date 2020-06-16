@@ -36,7 +36,7 @@ const appPages: AppPage[] = [
   },
   {
     title: 'First Aid Steps',
-    url: '/page/First Aid Steps',
+    url: '/firstaid/First Aid Steps',
     iosIcon: medkitOutline,
     mdIcon: medkitSharp
   },
