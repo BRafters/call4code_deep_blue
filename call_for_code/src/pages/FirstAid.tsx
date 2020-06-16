@@ -1,6 +1,19 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, 
+     IonContent, 
+     IonHeader, 
+     IonMenuButton, 
+     IonPage, 
+     IonTitle, 
+     IonToolbar, 
+     IonNav, 
+     IonItem, 
+     IonLabel,
+     IonIcon,
+     IonList } from '@ionic/react';
+
+import { cameraOutline } from 'ionicons/icons';
 import ExploreContainer from '../components/ExploreContainer';
 
 const FirstAid: React.FC = () => {
@@ -17,11 +30,18 @@ const FirstAid: React.FC = () => {
           </IonHeader>
 
           <IonContent>
-          <IonHeader collapse="condense">
-               <IonToolbar>
-               <IonTitle size="large">{name}</IonTitle>
-               </IonToolbar>
-          </IonHeader>
+               <IonNav className="hydrated">
+                    <IonList>
+                         <IonItem button>
+                              <IonIcon icon={cameraOutline}></IonIcon>
+                              <IonLabel>This is a label</IonLabel>
+                         </IonItem>
+                         <IonItem button>
+                              <IonIcon icon={cameraOutline}></IonIcon>
+                              <IonLabel>This is another label</IonLabel>
+                         </IonItem>
+                    </IonList>
+               </IonNav>
           <ExploreContainer name={name} />
           </IonContent>
      </IonPage>
