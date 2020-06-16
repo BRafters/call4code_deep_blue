@@ -12,7 +12,7 @@ import {
 
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { helpOutline, helpSharp, bugOutline, bugSharp, cloudOutline, cloudSharp, chatboxOutline, chatboxSharp, bookmarkOutline, medkitSharp, medkitOutline, pulseOutline, pulseSharp } from 'ionicons/icons';
+import { helpOutline, helpSharp, homeOutline, homeSharp, bugOutline, bugSharp, cloudOutline, cloudSharp, chatboxOutline, chatboxSharp, bookmarkOutline, medkitSharp, medkitOutline, pulseOutline, pulseSharp } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -29,6 +29,12 @@ interface Label{
 }
 
 const appPages: AppPage[] = [
+  {
+    title: 'Home',
+    url: '/page/Home',
+    iosIcon: homeOutline,
+    mdIcon: homeSharp
+  },
   {
     title: 'First Aid Steps',
     url: '/page/First Aid Steps',
