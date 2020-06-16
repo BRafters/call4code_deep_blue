@@ -30,13 +30,13 @@ interface Label{
 const appPages: AppPage[] = [
   {
     title: 'Home',
-    url: '/page/Home',
+    url: '/home',
     iosIcon: homeOutline,
     mdIcon: homeSharp
   },
   {
     title: 'First Aid Steps',
-    url: '/page/First Aid Steps',
+    url: '/firstaid',
     iosIcon: medkitOutline,
     mdIcon: medkitSharp
   },
