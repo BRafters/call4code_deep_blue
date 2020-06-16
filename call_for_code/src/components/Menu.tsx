@@ -6,13 +6,12 @@ import {
   IonList,
   IonListHeader,
   IonMenu,
-  IonMenuToggle,
-  IonNote,
+  IonMenuToggle
 } from '@ionic/react';
 
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { helpOutline, helpSharp, homeOutline, homeSharp, bugOutline, bugSharp, cloudOutline, cloudSharp, chatboxOutline, chatboxSharp, bookmarkOutline, medkitSharp, medkitOutline, pulseOutline, pulseSharp } from 'ionicons/icons';
+import { helpOutline, helpSharp, homeOutline, homeSharp, bugOutline, bugSharp, cloudOutline, cloudSharp, chatboxOutline, chatboxSharp, medkitSharp, medkitOutline, pulseOutline, pulseSharp } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
