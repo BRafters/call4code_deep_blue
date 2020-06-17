@@ -18,9 +18,14 @@ const Home: React.FC = () => {
           <IonContent>
                <div id="background-circle"></div>
 
-               <section id="home__title-box">
+               <section id="home__overlay">
                     <img id="home__logo" src="assets/icon/favicon.png" alt="logo" />
                     <h1 id="home__title">Home</h1>
+
+                    <div id="home__info">
+                         <p>Hello</p>
+                         <p>This is an information thing</p>
+                    </div>
 
                </section>
 
