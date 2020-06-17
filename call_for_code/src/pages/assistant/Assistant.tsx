@@ -17,7 +17,7 @@ const Home: React.FC = () => {
 
           <IonContent>
                Assistant Page
-
+               
           </IonContent>
 
 
