@@ -3,7 +3,7 @@
 #background-circle {
     background: #0099FF;
     Width: 140vw;
-    height: 140vw;
+    height: 80vh;
     border-radius: 100%;
     position: absolute;
     top: -30vh;
@@ -11,13 +11,24 @@
     z-index: 0;
 }
 
-#title-box {
+#home__title-box {
     margin-top: 30%;
 }
 
-#title {
+#home__title {
     position: relative;
     z-index: 1;
     text-align: center;
     color: white;
+}
+
+#home__logo {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 5px 5px rgba(7, 7, 7, 0.171);
+    border-radius: 100%;
 }
