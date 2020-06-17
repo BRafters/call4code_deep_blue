@@ -18,8 +18,32 @@ const FirstAid: React.FC = () => {
 
           <IonContent>
                <IonNav>
-                    <IonItem button className="ion-padding-vertical">
-                         <IonLabel>Test link</IonLabel>
+                    <IonItem button >
+                         <IonLabel className="fonts">Test link</IonLabel>
+                    </IonItem>
+                    <IonItem button >
+                         <IonLabel className="fonts">Test link</IonLabel>
+                    </IonItem>
+                    <IonItem button >
+                         <IonLabel className="fonts">Test link</IonLabel>
+                    </IonItem>
+                    <IonItem button >
+                         <IonLabel className="fonts">Test link</IonLabel>
+                    </IonItem>
+                    <IonItem button >
+                         <IonLabel className="fonts">Test link</IonLabel>
+                    </IonItem>
+                    <IonItem button >
+                         <IonLabel className="fonts">Test link</IonLabel>
+                    </IonItem>
+                    <IonItem button >
+                         <IonLabel className="fonts">Test link</IonLabel>
+                    </IonItem> 
+                    <IonItem button >
+                         <IonLabel className="fonts">Test link</IonLabel>
+                    </IonItem>
+                    <IonItem button >
+                         <IonLabel className="fonts">Test link</IonLabel>
                     </IonItem>
                </IonNav>
           </IonContent> 
