@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import './Home.css';
+import './Assistant.css';
 
 const Home: React.FC = () => {
      
@@ -16,14 +16,8 @@ const Home: React.FC = () => {
           </IonHeader>
 
           <IonContent>
-               <div id="background-circle"></div>
-
-               <section id="home__title-box">
-                    <img id="home__logo" src="assets/icon/favicon.png" alt="logo" />
-                    <h1 id="home__title">Home</h1>
-
-               </section>
-
+               Assistant Page
+               
           </IonContent>
 
 
