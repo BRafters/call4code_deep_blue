@@ -99,7 +99,7 @@ const FirstAid: React.FC = () => {
 
                {
                     items.map((item, key) => { return(
-                         <IonItem button >
+                         <IonItem button key={key} >
                               <IonIcon icon={item.icon} color={item.color}></IonIcon>
                               <IonLabel className="fonts"> {item.name} </IonLabel>
                          </IonItem> 
