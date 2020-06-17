@@ -1,11 +1,5 @@
 import Menu from './components/Menu';
 import Page from './pages/Page';
-
-// Sub pages
-import Home from './pages/home/Home';
-import FirstAid from './pages/firstaid/FirstAid';
-
-
 import React from 'react';
 import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
@@ -30,6 +24,15 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+// Sub pages
+import Home from './pages/home/Home';
+import FirstAid from './pages/firstaid/FirstAid';
+import Survival from './pages/survival/Survival';
+import Assistant from './pages/assistant/Assistant';
+import Weather from './pages/weather/Weather';
+import Report from './pages/report/Report';
+import Faq from './pages/faq/Faq';
+
 const App: React.FC = () => {
 
   return (
@@ -39,8 +42,15 @@ const App: React.FC = () => {
           <Menu />
           <IonRouterOutlet id="main">
             <Route path="/page/:name" component={Page} exact />
+
             <Route path="/firstaid" component={FirstAid} exact/>
             <Route path='/home' component={Home} exact/>
+            <Route path='/survival' component={Survival} exact/>
+            <Route path='/assistant' component={Assistant} exact/>
+            <Route path='/weather' component={Weather} exact/>
+            <Route path='/report' component={Report} exact/>
+            <Route path='/faq' component={Faq} exact/>
+
             <Redirect from="/" to="/home" exact />
           </IonRouterOutlet>
         </IonSplitPane>

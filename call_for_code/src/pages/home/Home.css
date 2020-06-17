@@ -11,24 +11,32 @@
     z-index: 0;
 }
 
-#home__title-box {
-    margin-top: 30%;
+#home__overlay {
+    margin: 30% 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 #home__title {
-    position: relative;
-    z-index: 1;
-    text-align: center;
     color: white;
 }
 
 #home__logo {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    z-index: 1;
+    width: 75px;
+    height: 75px;
     margin: 0 auto;
-    display: block;
     box-shadow: 0 5px 5px rgba(7, 7, 7, 0.171);
     border-radius: 100%;
+}
+
+#home__info {
+    padding: 10px;
+    background-color: rgb(255, 19, 19);
+    margin: 40px 30%;
+    color: white;
+}
+
+#home__info > p {
+    margin: 5px;
 }

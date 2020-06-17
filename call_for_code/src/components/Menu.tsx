@@ -42,19 +42,19 @@ const appPages: AppPage[] = [
   },
   {
     title: 'Survival Tips',
-    url: '/page/Survival Tips',
+    url: '/survival',
     iosIcon: pulseOutline,
     mdIcon: pulseSharp
   },
   {
     title: 'Ask the Assistant',
-    url: '/page/Assistant',
+    url: '/assistant',
     iosIcon: chatboxOutline,
     mdIcon: chatboxSharp
   },
   {
     title: 'Local Weather',
-    url: '/page/Weather',
+    url: '/weather',
     iosIcon: cloudOutline,
     mdIcon: cloudSharp
   }
@@ -63,13 +63,13 @@ const appPages: AppPage[] = [
 const labels: Label[] = [
   {
     title: 'Report Bug',
-    url: '/page/Report Bug',
+    url: '/report',
     iosIcon: bugOutline,
     mdIcon: bugSharp
   },
   {
     title: 'FAQ',
-    url: '/page/FAQ',
+    url: '/faq',
     iosIcon: helpOutline,
     mdIcon: helpSharp
   }
