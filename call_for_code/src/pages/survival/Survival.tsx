@@ -98,7 +98,7 @@ const Survival: React.FC = () => {
           <IonContent>
 
                {
-                    items.map(item => { return(
+                    items.map((item, key) => { return(
                          <IonItem button >
                               <IonIcon icon={item.icon} color={item.color}></IonIcon>
                               <IonLabel className="fonts"> {item.name} </IonLabel>
