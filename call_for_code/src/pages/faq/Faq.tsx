@@ -17,7 +17,7 @@ const Faq: React.FC = () => {
      <IonPage>
           <IonHeader>
           <IonToolbar color="primary">
-               <IonButtons slot="start">
+               <IonButtons slot="end">
                <IonMenuButton />
                </IonButtons>
                <IonTitle>FAQ</IonTitle>
