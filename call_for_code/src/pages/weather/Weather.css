@@ -1,0 +1,11 @@
+
+#background-circle {
+     background: #0099FF;
+     Width: 140vw;
+     height: 80vh;
+     border-radius: 100%;
+     position: absolute;
+     top: -30vh;
+     left: -20vw;
+     z-index: 0;
+ }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useParams } from 'react-router';
 import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonNav, IonItem, IonLabel, IonList, IonVirtualScroll } from '@ionic/react';
 import { sadOutline, compassOutline, fitnessOutline, heartOutline, personOutline, restaurantOutline, roseOutline, snowOutline, walkOutline } from 'ionicons/icons';
 import './FirstAid.css';
