@@ -4,6 +4,7 @@ import Page from './pages/Page';
 // Sub pages
 import Home from './pages/home/Home';
 import FirstAid from './pages/firstaid/FirstAid';
+import FirstAidDetails from './pages/firstaid/FirstAidDetails';
 
 
 import React from 'react';
@@ -40,6 +41,7 @@ const App: React.FC = () => {
           <IonRouterOutlet id="main">
             <Route path="/page/:name" component={Page} exact />
             <Route path='/firstaid' component={FirstAid} exact/>
+            <Route path='/firstaid/:id' component={FirstAidDetails} exact/>
             <Route path='/home' component={Home} exact/>
             <Redirect from="/" to="/home" exact />
           </IonRouterOutlet>

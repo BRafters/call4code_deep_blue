@@ -14,11 +14,23 @@ import { IonButtons,
      IonCardContent,
      IonList,
      IonItem } from '@ionic/react';
+import { RouteComponentProps } from 'react-router';
 import data from './firstAidData.json';
 import './FirstAid.css';
- 
 
-const FirstAid: React.FC = () => {
+interface FirstAidDetailPageProps extends RouteComponentProps<{
+     id: string;
+   }> {}
+
+const FirstAidDetails: React.FC<FirstAidDetailPageProps> = (match) => {
+     const [FirstAidDetail, setFirstAidDetail] = useState<any>([]);
+
+     useEffect(() => {
+          console.log(`First aid detail for ${match.params.id}`)
+          var result = data.filter(procedure => procedure.id === match.params.id)
+          setFirstAidDetail(result)
+
+        }, [])
 
      const { name } = useParams<{name: string;}>();
      return(
@@ -34,15 +46,15 @@ const FirstAid: React.FC = () => {
           <IonContent>
           <IonHeader collapse="condense">
                <IonToolbar>
-               <IonTitle size="large">{name}</IonTitle>
+               <IonTitle size="large">{FirstAidDetail.procedure}</IonTitle>
                </IonToolbar>
           </IonHeader>
                <IonList>
                     {
                          data.map((firstAidProcedure, index)=>{
                               return (
-                                   <IonItem href={`/FirstAid/${firstAidProcedure.id}`} key={index}>
-                                             {firstAidProcedure.procedure}
+                                   <IonItem>
+                                        {firstAidProcedure.procedure}
                                    </IonItem>
                               )
                          })
@@ -55,4 +67,4 @@ const FirstAid: React.FC = () => {
      );
 }
 
-export default FirstAid;
+export default FirstAidDetails;
