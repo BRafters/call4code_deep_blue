@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './Weather.css';
 import { setTimeout } from 'timers';
-// import HEREMap from "react-here-maps";
+import HEREMap from "here-maps-react";
 
 const Weather: React.FC = () => {
      // Here, we will do an API call using React hooks
