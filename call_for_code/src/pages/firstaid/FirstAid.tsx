@@ -84,11 +84,12 @@ const FirstAid: React.FC = () => {
           },
      ]
 
+
      return(
      <IonPage>
           <IonHeader>
           <IonToolbar color="primary">
-               <IonButtons slot="start">
+               <IonButtons slot="end">
                <IonMenuButton />
                </IonButtons>
                <IonTitle>First Aid</IonTitle>
@@ -96,10 +97,9 @@ const FirstAid: React.FC = () => {
           </IonHeader>
 
           <IonContent>
-
                {
                     items.map((item, key) => { return(
-                         <IonItem button key={key} >
+                         <IonItem button key={key} routerLink={"firstaid/"+key} >
                               <IonIcon icon={item.icon} color={item.color}></IonIcon>
                               <IonLabel className="fonts"> {item.name} </IonLabel>
                          </IonItem> 
