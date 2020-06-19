@@ -8,4 +8,10 @@
      top: -30vh;
      left: -20vw;
      z-index: 0;
- }
+ 
+}
+
+.icons{
+    font-size: 5em;
+    color: white;
+}
