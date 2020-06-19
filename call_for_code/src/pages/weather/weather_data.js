@@ -1,5 +1,5 @@
 import React from 'react';
-import {sunnyOutline } from 'ionicons/icons';
+import { sunnyOutline, cloudOutline, rainyOutline, thunderstormOutline } from 'ionicons/icons';
 import {IonIcon} from '@ionic/react';
 
 class WeatherData extends React.Component {
@@ -46,6 +46,15 @@ class Header extends React.Component{
                temp = weather.current.temp;
                if(weather.current.weather[0].main === "Clear"){
                     icon = sunnyOutline;
+               }
+               else if(weather.current.weather[0].main === "Cloudy"){
+                    icon = cloudOutline;
+               }
+               else if(weather.current.weather[0].main === "Rain"){
+                    icon = rainyOutline;
+               }
+               else if(weather.current.weather[0].main === "Thunderstorm"){
+                    icon = thunderstormOutline;
                }
           }
           return(
