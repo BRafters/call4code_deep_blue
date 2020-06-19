@@ -34,7 +34,7 @@ const FirstAidSelected: React.FC = () => {
               {
                 item[0].steps.map((step, index) => {
                   return (
-                      <IonItem>
+                      <IonItem key={index}>
                         {step}
                       </IonItem>
                   )
