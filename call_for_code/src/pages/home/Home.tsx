@@ -1,5 +1,6 @@
 import React from 'react';
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonIcon, IonItem, IonChip, IonLabel} from '@ionic/react';
+import { alertCircleOutline } from 'ionicons/icons';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -23,8 +24,10 @@ const Home: React.FC = () => {
                     <h1 id="home__title">Home</h1>
 
                     <div id="home__info">
-                         <p>Hello</p>
-                         <p>This is an information thing</p>
+                         <IonChip>
+                              <IonIcon size="large" icon={alertCircleOutline}></IonIcon>
+                              <IonLabel>Information here</IonLabel>
+                         </IonChip>
                     </div>
 
                </section>

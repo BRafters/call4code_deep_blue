@@ -32,11 +32,14 @@
 
 #home__info {
     padding: 10px;
-    background-color: rgb(255, 19, 19);
-    margin: 40px 30%;
-    color: white;
+    margin: 0px 20%;
 }
 
-#home__info > p {
-    margin: 5px;
+#home__info ion-icon {
+    color: red;
+}
+
+#home__info ion-chip {
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }

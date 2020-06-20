@@ -47,7 +47,7 @@ const appPages: AppPage[] = [
     mdIcon: pulseSharp
   },
   {
-    title: 'Ask the Assistant',
+    title: 'Assistant',
     url: '/assistant',
     iosIcon: chatboxOutline,
     mdIcon: chatboxSharp
