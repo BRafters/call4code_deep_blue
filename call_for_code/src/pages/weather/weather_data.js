@@ -9,6 +9,9 @@ class WeatherData extends React.Component {
                weather: {}
           }
      }
+     lat = localStorage.getItem('lat');
+     long = localStorage.getItem('lon');
+
      componentWillMount(){
           navigator.geolocation.getCurrentPosition(async (position) => {
                let { latitude, longitude } = position.coords;
@@ -22,6 +25,7 @@ class WeatherData extends React.Component {
           localStorage.clear();
      }
      render(){
+          
           if(!this.state.weather.current){
                return(
                     <Header err="loading"/>
@@ -41,7 +45,7 @@ class Header extends React.Component{
 
      render(){
           const weather = this.props.curr_weather
-          var temp, icon;
+          var temp, icon, daily_high, daily_low;
           if(weather){
                temp = weather.current.temp;
                if(weather.current.weather[0].main === "Clear"){
@@ -56,12 +60,16 @@ class Header extends React.Component{
                else if(weather.current.weather[0].main === "Thunderstorm"){
                     icon = thunderstormOutline;
                }
+               console.log(weather.daily[0]);
+               daily_high = +weather.daily[0].temp.max;
+               daily_low = +weather.daily[0].temp.min;
           }
           return(
                <div>
                     <IonIcon className="icons" icon={icon}/>
-                    {!!temp && <h1 className="temp">{temp.toFixed(0)}°C</h1> }
-                    {/*<h3>High {daily.}</h3> */}
+                    {!!temp && <h1 className="temp_h1">{temp.toFixed(0)}°C</h1> }
+                    {!!daily_high && <h4 className="high_low">High: {daily_high.toFixed(0)}°C</h4>}
+                    {!!daily_low && <h4 className="high_low">Low: {daily_low.toFixed(0)}°C</h4>}
                </div>
           );
 
