@@ -1,9 +1,10 @@
-import React from 'react';
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import React, { useState, useEffect, Component } from 'react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonToolbar } from '@ionic/react';
 import './Weather.css';
+import WeatherData from './weather_data.js';
+import CreateMap from './maps.js';
 
-const Home: React.FC = () => {
-     
+const Weather: React.FC = () => {
      return(
           <IonPage>
           <IonHeader>
@@ -11,17 +12,20 @@ const Home: React.FC = () => {
                <IonButtons slot="end">
                <IonMenuButton />
                </IonButtons>
-               <IonTitle>Home</IonTitle>
           </IonToolbar>
           </IonHeader>
 
           <IonContent>
-               Weather Page
+               <div id="background-circle"></div>
+               <section id="home__overlay">
+                    <WeatherData />
+               </section>
+               <section id="map_overlay">
+                    <CreateMap />
+               </section>
           </IonContent>
-
-
      </IonPage>
      );
 }
 
-export default Home;
+export default Weather;
