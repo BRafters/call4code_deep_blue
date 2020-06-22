@@ -51,7 +51,7 @@ const App: React.FC = () => {
 
             <Route path='/home' component={Home} exact/>
             <Route path="/firstaid" component={FirstAid} exact/>
-            <Route path="/firstaid/:id" component={FirstAidSelected}/>
+            <Route path="/firstaid/:name" component={FirstAidSelected}/>
 
             <Route path='/survival' component={Survival} exact/>
             <Route path='/survival/:name' component={SurvivalSelected}/>
