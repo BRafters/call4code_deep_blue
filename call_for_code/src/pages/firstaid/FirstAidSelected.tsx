@@ -5,49 +5,48 @@ import data from '../../data.json';
 import './FirstAid.css';
 
 const FirstAidSelected: React.FC = () => {
-    const { id } = useParams<{ id: string; }>();
+     
+    const { name } = useParams<{ name: string; }>();
 
-    const firstAidData = data.firstaid;
+    const pageData = data.firstaid;
 
-    const item = firstAidData.filter((procedure:any) => procedure.id === parseInt(id));
+    const item:any = pageData.find(item => item.link === name);
 
      return(
-     <IonPage>
-          <IonHeader>
-          <IonToolbar color="primary">
-               <IonButtons slot="start">
-                <IonBackButton/>
-               </IonButtons>
-               <IonButtons slot="end">
-               <IonMenuButton />
-               </IonButtons>
-               <IonTitle> {item[0].procedure} </IonTitle>
-          </IonToolbar>
-          </IonHeader>
+          <IonPage>
+               <IonHeader>
+               <IonToolbar color="primary">
+                    <IonButtons slot="start">
+                    <IonBackButton/>
+                    </IonButtons>
+                    <IonButtons slot="end">
+                    <IonMenuButton />
+                    </IonButtons>
+                    <IonTitle> {item.procedure} </IonTitle>
+               </IonToolbar>
+               </IonHeader>
 
-          <IonContent>
-          <IonCard>
-               <IonCardHeader>
-                    <IonCardTitle>Steps</IonCardTitle>
-               </IonCardHeader>
-               <IonCardContent>
-                    <IonList>
-                         {
-                              item[0].steps.map((step, index) => {
+               <IonContent>
+                    <IonCard>
+                         <IonCardHeader>
+                              <IonCardTitle>Steps</IonCardTitle>
+                         </IonCardHeader>
+                         <IonCardContent>
+                              <IonList>
+                              {
+                                   item.steps.map((step: string, index: number) => {
                                    return(
                                         <IonItem key={index}>
                                              {step}
                                         </IonItem>
-                                   )
-                              })
-                         }
-                    </IonList>
-               </IonCardContent>    
-          </IonCard>
+                                   )})
+                              }
+                              </IonList>
+                         </IonCardContent>    
+                    </IonCard>
 
-     
-          </IonContent> 
-     </IonPage>
+               </IonContent> 
+          </IonPage>
      );
 }
 
