@@ -1,91 +1,104 @@
 import React from 'react';
-import { useParams } from 'react-router';
-import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonNav, IonItem, IonLabel, IonList } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonNav, IonItem, IonLabel, IonList, IonVirtualScroll } from '@ionic/react';
 import { sadOutline, compassOutline, fitnessOutline, heartOutline, personOutline, restaurantOutline, roseOutline, snowOutline, walkOutline } from 'ionicons/icons';
 import data from '../../data.json';
 import './FirstAid.css';
 
 const FirstAid: React.FC = () => {
 
-     const items = data[0].firstaid;
-     // const items = [
-     //      {
-     //           icon: sadOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: compassOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: fitnessOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: heartOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: personOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: restaurantOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: restaurantOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: restaurantOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: restaurantOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: restaurantOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: restaurantOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: restaurantOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: restaurantOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: restaurantOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     //      {
-     //           icon: restaurantOutline,
-     //           name: "Test Link",
-     //           color: "danger"
-     //      },
-     // ]
 
+     const items = [
+          {
+               icon: sadOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: compassOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: fitnessOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: heartOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: personOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: restaurantOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: restaurantOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: restaurantOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: restaurantOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: restaurantOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: restaurantOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: restaurantOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: restaurantOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: restaurantOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+          {
+               icon: restaurantOutline,
+               name: "Test Link",
+               color: "danger",
+               size: "16px"
+          },
+     ]
 
      return(
      <IonPage>
@@ -97,13 +110,12 @@ const FirstAid: React.FC = () => {
                <IonTitle>First Aid</IonTitle>
           </IonToolbar>
           </IonHeader>
-
           <IonContent>
                {
-                    items.map((item, key) => { return(
-                         <IonItem button key={key} routerLink={`firstaid/${item.id}`} >
-                              <IonIcon icon={heartOutline} color="danger"></IonIcon>
-                              <IonLabel className="fonts"> {item.procedure} </IonLabel>
+                    items.map(item => { return (
+                         <IonItem button class="ion-item">
+                              <IonIcon className="healthicon" icon={item.icon} color={item.color} size={item.size}></IonIcon>
+                              <IonLabel className="fonts">{item.name}</IonLabel>
                          </IonItem> 
                     )})
                }
