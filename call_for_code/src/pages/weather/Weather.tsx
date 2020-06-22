@@ -9,7 +9,7 @@ const Weather: React.FC = () => {
           <IonPage>
           <IonHeader>
           <IonToolbar color="primary">
-               <IonButtons slot="start">
+               <IonButtons slot="end">
                <IonMenuButton />
                </IonButtons>
           </IonToolbar>

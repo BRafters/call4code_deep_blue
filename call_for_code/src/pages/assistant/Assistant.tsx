@@ -8,10 +8,10 @@ const Home: React.FC = () => {
           <IonPage>
           <IonHeader>
           <IonToolbar color="primary">
-               <IonButtons slot="start">
+               <IonButtons slot="end">
                <IonMenuButton />
                </IonButtons>
-               <IonTitle>Home</IonTitle>
+               <IonTitle>Assistant</IonTitle>
           </IonToolbar>
           </IonHeader>
 
