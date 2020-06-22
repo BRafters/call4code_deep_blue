@@ -22,29 +22,28 @@ const FirstAidSelected: React.FC = () => {
                <IonMenuButton />
                </IonButtons>
                <IonTitle> {item[0].procedure} </IonTitle>
-               <IonCard>
-                    <IonCardHeader>
-                         <IonCardTitle>Care Steps</IonCardTitle>
-                    </IonCardHeader>
-                    <IonCardContent>
-                         <IonList>
-                              {
-                                   item[0].steps.map((step, index) => {
-                                        return(
-                                             <IonItem key={index}>
-                                                  {step}
-                                             </IonItem>
-                                        )
-                                   })
-                              }
-                         </IonList>
-                    </IonCardContent>    
-               </IonCard>
           </IonToolbar>
           </IonHeader>
 
           <IonContent>
-
+          <IonCard>
+               <IonCardHeader>
+                    <IonCardTitle>Steps</IonCardTitle>
+               </IonCardHeader>
+               <IonCardContent>
+                    <IonList>
+                         {
+                              item[0].steps.map((step, index) => {
+                                   return(
+                                        <IonItem key={index}>
+                                             {step}
+                                        </IonItem>
+                                   )
+                              })
+                         }
+                    </IonList>
+               </IonCardContent>    
+          </IonCard>
 
      
           </IonContent> 
