@@ -2,16 +2,9 @@ import React, { useState, useEffect, Component } from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonToolbar } from '@ionic/react';
 import './Weather.css';
 import WeatherData from './weather_data.js';
+import CreateMap from './maps.js';
 
 const Weather: React.FC = () => {
-     // Here, we will do an API call using React hooks
-     // var [weather, setWeather] = useState<{}>();
-     // const [here, setHere] = useState<{}>();
-     // const [location, setLocation] = useState<{}>();
-
-     // HERE URLS
-     const here_app_id = 'LAYxqcMgc4AzIuFwAVcR';
-
      return(
           <IonPage>
           <IonHeader>
@@ -28,6 +21,7 @@ const Weather: React.FC = () => {
                     <WeatherData />
                </section>
                <section id="map_overlay">
+                    <CreateMap />
                </section>
           </IonContent>
      </IonPage>

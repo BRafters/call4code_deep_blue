@@ -44,14 +44,16 @@ class Header extends React.Component{
      }
 
      render(){
-          const weather = this.props.curr_weather
-          var temp, icon, daily_high, daily_low;
+          const weather = this.props.curr_weather;
+          var temp, icon, daily_high, daily_low, curr;
           if(weather){
                temp = weather.current.temp;
                if(weather.current.weather[0].main === "Clear"){
                     icon = sunnyOutline;
                }
-               else if(weather.current.weather[0].main === "Cloudy"){
+               else if(weather.current.weather[0].main === "Clouds" 
+               || weather.current.weather[0].main === "Drizzle"
+               || weather.current.weather[0].main === "Mist"){
                     icon = cloudOutline;
                }
                else if(weather.current.weather[0].main === "Rain"){
@@ -60,14 +62,20 @@ class Header extends React.Component{
                else if(weather.current.weather[0].main === "Thunderstorm"){
                     icon = thunderstormOutline;
                }
-               console.log(weather.daily[0]);
+
                daily_high = +weather.daily[0].temp.max;
                daily_low = +weather.daily[0].temp.min;
+               curr = weather.current.weather[0].description;
+               console.log(weather.current.weather[0].main)
+               if(typeof(curr) === 'string'){
+                    curr = curr.charAt(0).toUpperCase() + curr.slice(1);
+               }
           }
           return(
-               <div>
-                    <IonIcon className="icons" icon={icon}/>
-                    {!!temp && <h1 className="temp_h1">{temp.toFixed(0)}°C</h1> }
+               <div className="weather-content">
+                    {!!icon && <IonIcon className="icons" icon={icon}/>}
+                    {!!temp && <h1 className="temp_h1">{temp.toFixed(0)}°C</h1>}
+                    {!!curr && <h2 className="temp_h2">{curr}</h2>}
                     {!!daily_high && <h4 className="high_low">High: {daily_high.toFixed(0)}°C</h4>}
                     {!!daily_low && <h4 className="high_low">Low: {daily_low.toFixed(0)}°C</h4>}
                </div>
@@ -76,4 +84,4 @@ class Header extends React.Component{
      }
 }
 
-export default WeatherData
+export default WeatherData;

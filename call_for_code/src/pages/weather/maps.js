@@ -1,50 +1,52 @@
 import React from 'react';
+import {GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-// Referred to the tutorial from HERE -> https://developer.here.com/tutorials/react/
-class DisplayMap extends React.Component{
-     constructor(props){
-          super(props);
-          mapRef = React.createRef();
 
-          this.state = {
-               // The map will be set to default 
-               map: null
-          }
-     }
-     componentDidMount(){
-          const coords = {latitude: localStorage.getItem('lat'), longitude: localStorage.getItem('lon')};
-          const here_api_key = '1qDEkj05axzzZAiYKEtqwyovdBuc4SfyxuLktBbYNWA';
-          const H = window.H;
-          const platform = new H.service.Platform({
-               apiKey: here_api_key
-          });
+navigator.geolocation.getCurrentPosition((position) => {
+     localStorage.setItem('lat', position.coords.latitude);
+     localStorage.setItem('lon', position.coords.longitude);
+});
 
-          const default_layers = platform.createDefaultLayers();
 
-          // Now, we will create an instance of the map
-          const map = new H.map(
-               this.mapRef.current,
-               default_layers.vector.normal.map,
-               {
-                    center: {lat: coords.latitude, lon: coords.longitude},
-                    zoom: 4,
-                    pixelRatio: window.devicePixelRatio || 1
-               }
-          );
-
-          this.setState({
-               map
-          });
-     }
-
-     // Clean up for the maps to avoid mem leaks
-     componentWillUnmount(){
-          this.state.map.dispose;
-     }
- 
-     render(){
-          return(
-               <div ref={this.mapRef} style={{height: '500px'}}/>
-          );
-     }
+const container_size = {
+     height: '100%',
+     width: '100vw'
 }
+
+
+var coords = {lat: +localStorage.getItem('lat'), lng: +localStorage.getItem('lon')}
+
+function CreateMap(){
+     const [map, setMap] = React.useState(null);
+     const onload = React.useCallback(function callback(map){
+          const map_bounds = new window.google.maps.LatLngBounds();
+          map.position = coords;
+          // map.fitBounds(map_bounds);
+          
+          setMap(map);
+     }, []);
+
+     const marker_onload = marker => {
+          console.log("Marker: " + marker);
+     }
+
+     const onUnmount = React.useCallback(function callback(map){
+          setMap(null);
+     }, []);
+
+     return(
+          <LoadScript googleMapsApiKey="AIzaSyD7XNWpI2t8d0tyEXl1IJn0FTf0xGobHD8">
+               <GoogleMap
+                    mapContainerStyle={container_size}
+                    center={coords}
+                    zoom={12}
+                    onLoad={onload}
+                    onUnmount={onUnmount}
+                    >
+                    <Marker onLoad={marker_onload} position={coords}/>
+               </GoogleMap>
+          </LoadScript>
+     );
+}
+
+export default React.memo(CreateMap);
