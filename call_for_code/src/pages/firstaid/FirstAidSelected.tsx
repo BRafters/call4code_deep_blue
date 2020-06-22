@@ -1,31 +1,49 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonNav, IonItem, IonLabel, IonList, IonBackButton } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonNav, IonItem, IonLabel, IonList, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent, IonBackButton } from '@ionic/react';
+import data from '../../data.json';
 import './FirstAid.css';
-import data from "../../data.json";
 
 const FirstAidSelected: React.FC = () => {
     const { id } = useParams<{ id: string; }>();
-    
-    const content = data.firstaid;
+
+    const firstAidData = data.firstaid;
+
+    const item = firstAidData.filter((procedure:any) => procedure.id === parseInt(id));
 
      return(
      <IonPage>
           <IonHeader>
           <IonToolbar color="primary">
                <IonButtons slot="start">
-                <IonBackButton />
+                <IonBackButton/>
                </IonButtons>
                <IonButtons slot="end">
-               <IonMenuButton/>
+               <IonMenuButton />
                </IonButtons>
-               <IonTitle> {id} </IonTitle>
-              
+               <IonTitle> {item[0].procedure} </IonTitle>
           </IonToolbar>
           </IonHeader>
 
           <IonContent>
-            
+          <IonCard>
+               <IonCardHeader>
+                    <IonCardTitle>Steps</IonCardTitle>
+               </IonCardHeader>
+               <IonCardContent>
+                    <IonList>
+                         {
+                              item[0].steps.map((step, index) => {
+                                   return(
+                                        <IonItem key={index}>
+                                             {step}
+                                        </IonItem>
+                                   )
+                              })
+                         }
+                    </IonList>
+               </IonCardContent>    
+          </IonCard>
 
      
           </IonContent> 
