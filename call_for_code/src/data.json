@@ -77,7 +77,17 @@
             }]
         }
     ],
-    "page2": [
-
+    "survival": [
+        {
+            "id": 0,
+            "link": "link",
+            "procedure": "Procedure",
+            "steps": ["Step 1", "Step 2"],
+            "extraInfo": [{
+                "extraName": "step",
+                "extraSteps": ["info", "info"]
+            }]
+        }
+        
     ]
 }
