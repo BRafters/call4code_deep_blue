@@ -41,8 +41,7 @@ function CreateMap(){
                     center={coords}
                     zoom={12}
                     onLoad={onload}
-                    onUnmount={onUnmount}
-                    >
+                    onUnmount={onUnmount}>
                     <Marker onLoad={marker_onload} position={coords}/>
                </GoogleMap>
           </LoadScript>

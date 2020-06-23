@@ -8,14 +8,14 @@
     position: absolute;
     top: -30vh;
     left: -20vw;
-    z-index: 0;
+    z-index: 2;
 }
 
 #home__overlay {
     margin: 30% 0;
     text-align: center;
     position: relative;
-    z-index: 1;
+    z-index: 10;
 }
 
 #home__title {
@@ -32,11 +32,14 @@
 
 #home__info {
     padding: 10px;
-    background-color: rgb(255, 19, 19);
-    margin: 40px 30%;
-    color: white;
+    margin: 0px 20%;
 }
 
-#home__info > p {
-    margin: 5px;
+#home__info ion-icon {
+    color: red;
+}
+
+#home__info ion-chip {
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }

@@ -12,16 +12,17 @@
 .icons{
     font-size: 5em;
     color: white;
+    margin-bottom: 0;
 }
 .temp_h1{
-    font-size: 2.5em;
-    font-weight: bold;
+    font-size: 3.3em;
     color: white;
-    margin-bottom: 0;
+    margin: 0 auto;
 }
 .high_low{
     color: white;
     margin: 0;
+    font-weight: lighter;
 }
 .temp_h2{
     margin-top: 0;
@@ -29,16 +30,30 @@
     color: white;
 }
 #map_overlay{
-    height: 500px;
+    height: 60vh;
     width: 100vw;
-    position: relative;
-    top: -90px;
     z-index: 0;
 }
+#content{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    --offset-bottom: auto !important;
+    --overflow: hidden;
+    overflow: hidden;
+  
+}
+::-webkit-scrollbar {
+    display: none;
+}
 #home__overlay{
-    position: relative;
-    top: -70px;
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    height: 38vh;
     z-index: 1;
 }
 .gmnoprint{
