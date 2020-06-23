@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonNav, IonItem, IonLabel, IonList } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar} from '@ionic/react';
 import './Survival.css';
 
 const SurvivalSelected: React.FC = () => {
