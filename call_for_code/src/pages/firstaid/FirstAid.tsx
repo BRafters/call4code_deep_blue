@@ -1,9 +1,11 @@
 import React from 'react';
 import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonNav, IonItem, IonLabel, IonList, IonVirtualScroll } from '@ionic/react';
 import { sadOutline, compassOutline, fitnessOutline, heartOutline, personOutline, restaurantOutline, roseOutline, snowOutline, walkOutline } from 'ionicons/icons';
+import data from '../../data.json';
 import './FirstAid.css';
 
 const FirstAid: React.FC = () => {
+
 
      const items = [
           {
@@ -102,7 +104,7 @@ const FirstAid: React.FC = () => {
      <IonPage>
           <IonHeader>
           <IonToolbar color="primary">
-               <IonButtons slot="start">
+               <IonButtons slot="end">
                <IonMenuButton />
                </IonButtons>
                <IonTitle>First Aid</IonTitle>
