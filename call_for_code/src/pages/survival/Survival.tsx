@@ -1,7 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router';
-import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonNav, IonItem, IonLabel, IonList } from '@ionic/react';
-import { sadOutline, compassOutline, fitnessOutline, heartOutline, personOutline, restaurantOutline, roseOutline, snowOutline, walkOutline } from 'ionicons/icons';
+import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonItem, IonLabel } from '@ionic/react';
+import { sadOutline, compassOutline, fitnessOutline, heartOutline, personOutline, restaurantOutline } from 'ionicons/icons';
 import './Survival.css';
 
 const Survival: React.FC = () => {
@@ -96,7 +95,6 @@ const Survival: React.FC = () => {
           </IonHeader>
 
           <IonContent>
-
                {
                     items.map((item, key) => { return(
                          <IonItem button key={key}>
@@ -105,7 +103,6 @@ const Survival: React.FC = () => {
                          </IonItem> 
                     )})
                }
-     
           </IonContent> 
      </IonPage>
      );
