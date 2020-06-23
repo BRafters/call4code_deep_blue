@@ -77,7 +77,52 @@
             }]
         }
     ],
-    "page2": [
-
+    "survival": [
+        {
+            "id": 0,
+            "link": "water",
+            "category": "Water purification/filtration",
+            "methods": [
+                {"name":"Sun Purification",
+                "steps": [
+                    "Place water in a clear container (preferably glass) and let sit in full sunlight for five hours.", 
+                    "Pros: relatively easy to do", 
+                    "Cons: requires direct sunlight, weather or location may render this method ineffective. Have a backup method ready."
+                    ]},
+                {"name":"Boil",
+                "steps": [
+                    "Heat the water to a heavy, roiling boil for at least 5-10 minutes.", 
+                    "Pros: Effective for protecting against water pathogens(bacteria and virus)",
+                    "Cons: Requires capability to generate fire, conditions may not permit that"]},
+                {"name":"Active Carbon Filtration",
+                "steps": [
+                    "Run water through activated carbon",
+                    "Make activated carbon by putting wood chunks into an airtight metal container", 
+                    "Place container on a slow burning fire",
+                    "Without oxygen, the wood will not burn and produce activated carbon.",
+                    "Pros: filters excess minerals and material contaminants", 
+                    "Cons: this method doesn't filter virus or bacteria contaminants"]},
+                {"name":"Hole dig",
+                "steps": [
+                    "Dig a hole a couple meters, or few feet, from the water source",
+                    "The water will slowly fill into the hole through the soil",
+                    "The soil will provide a primitive filter, microorganisms in soil will feed on potential pathogens in the water",
+                    "If murky, it will still be murky, but there will be an improvement",
+                    "Pros: Simple method, doesn't require tools or any other processes",
+                    "Cons: May not fully remove contaminants"
+                ]},
+                {"name":"Solar Still",
+                "steps":[
+                    "Dig a hole in the ground",
+                    "Place moist vegetation in the hole",
+                    "place a water catching container in center",
+                    "Cover hole with a tarp, anchor it with rocks or any weighted object around the edges. Allow for a slight amount of droop in tarp over the water catching container",
+                    "Let the Solar Still sit for 24-48 hours. Water will evaporate and condense on the tarp, dripping down into the container.",
+                    "Pros: Produces pure, safe water. Doesn't require heavy interaction after establishing the still. Can be run continuously without monitoring",
+                    "Cons: Requires a tarp. There is a 1-2 day wait for safe water, important to establish early in survival scenario."
+                ]
+                }
+            ]
+        }
     ]
 }
