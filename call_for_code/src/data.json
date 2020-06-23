@@ -123,6 +123,20 @@
                 ]
                 }
             ]
+        },
+        {
+            "id": 1,
+            "link": "distress",
+            "category": "Visual Distress signals - requesting rescue at a distance",
+            "methods": [{"name":"Rocket/Shells","steps":["Fires red stars one at a time at short intervals"]},
+                {"name":"Smoke","steps":["Orange coloured smoke is internationally recognized as a sign of distress"]},
+                {"name":"Arm raises","steps":["Extend arms out to each side, slowly and repeatedly raise and lower arms."]},
+                {"name":"Flag Symbol","steps":["An orange flag, tarp, or fabric with a black V or a black square and circle on it"]},
+                {"name":"Square and ball","steps":["A black square flag or piece of fabric hanging above or below a black ball, or anything resembling a ball"]},
+                {"name":"SOS","steps":["Can be signalled with sound or light: 3 short pulses, 3 long, 3 short.", "Writing SOS in large letters on roof or clear area is also recognized", "A radio message consisting of the word 'mayday'"]},
+                {"name":"Gunshot or loud noise","steps":["A gunshot or other loud noise (Airhorn, bell, whistle, etc) at 1 minute intervals"]}
+            ]   
+
         }
     ]
 }
