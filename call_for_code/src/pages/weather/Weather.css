@@ -1,0 +1,89 @@
+#background-circle {
+     background: #0099FF;
+     Width: 140vw;
+     height: 80vh;
+     border-radius: 100%;
+     position: absolute;
+     top: -30vh;
+     left: -20vw;
+     z-index: 1;
+ 
+}
+svg{
+    font-size: 5em;
+    color: white;
+    margin-bottom: 0;
+
+}
+.temp_h1{
+    font-size: 3.3em;
+    color: white;
+    margin: 0 auto;
+
+}
+.high_low{
+    color: white;
+    margin: 0;
+    font-weight: lighter;
+
+}
+.temp_h2{
+    margin-top: 0;
+    margin-bottom: 35px;
+    color: white;
+
+}
+#map_overlay{
+    height: 60vh;
+    width: 100vw;
+}
+#content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    --offset-bottom: auto !important;
+    --overflow: hidden;
+    overflow: hidden;
+  
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#home__overlay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 38vh;
+    z-index: 1;
+}
+.gmnoprint{
+    visibility: hidden;
+}
+.gm-fullscreen-control{
+    visibility: hidden;
+}
+@media only screen and (min-height: 360px){
+    svg{
+        font-size: 6em;
+        color: white;
+        margin-bottom: 0;
+    }
+    .temp_h1{
+        font-size: 2.5em;
+        color: white;
+        margin: 0 auto;
+    }
+    #home__overlay{
+        position: relative;
+        top: 25px;
+    }
+}
+/* Button Overlay
+#showOverlayBtn {
+    position: absolute;
+    top: 58vh;
+    transition: all 0.5s ease-in;
+} */

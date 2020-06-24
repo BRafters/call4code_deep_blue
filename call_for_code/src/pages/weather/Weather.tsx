@@ -1,0 +1,33 @@
+import React, { useState, useEffect, Component } from 'react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonToolbar, IonFab, IonFabButton, IonIcon, IonTitle} from '@ionic/react';
+import './Weather.css';
+import WeatherData from './weather_data.js';
+import CreateMap from './maps.js';
+import { arrowUp } from 'ionicons/icons';
+
+const Weather: React.FC = () => {
+     return(
+          <IonPage>
+          <IonHeader>
+          <IonToolbar color="primary">
+               <IonTitle>Weather</IonTitle>
+               <IonButtons slot="end">
+                    <IonMenuButton />
+               </IonButtons>
+          </IonToolbar>
+          </IonHeader>
+
+          <IonContent id="content" >
+               <div id="background-circle"></div>
+               <section id="home__overlay">
+                    <WeatherData />
+               </section>
+               <section id="map_overlay">
+                    <CreateMap />
+               </section>
+          </IonContent>
+     </IonPage>
+     );
+}
+
+export default Weather;
