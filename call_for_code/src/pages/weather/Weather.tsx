@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Component } from 'react';
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonToolbar, IonFab, IonFabButton, IonIcon } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonToolbar, IonFab, IonFabButton, IonIcon, IonTitle} from '@ionic/react';
 import './Weather.css';
 import WeatherData from './weather_data.js';
 import CreateMap from './maps.js';

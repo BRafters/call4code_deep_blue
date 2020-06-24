@@ -26,7 +26,7 @@ const Survival: React.FC = () => {
                {
                     pageItems.map((item, key)=> {return(
                          <IonItem button key={key} routerLink={"survival/"+item.link}>
-                              <IonLabel className="fonts"> {item.procedure} </IonLabel>
+                              <IonLabel className="fonts"> {item.category} </IonLabel>
                               <IonIcon icon={arrowForward}></IonIcon>
                          </IonItem>
                     )})
