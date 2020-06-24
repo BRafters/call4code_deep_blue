@@ -1,13 +1,12 @@
 #background-circle {
      background: #0099FF;
-     Width: 150vw;
+     Width: 140vw;
      height: 80vh;
      border-radius: 100%;
      position: absolute;
-     top: -25vh;
-     left: -25%;
+     top: -30vh;
+     left: -20vw;
      z-index: 1;
-     transition: all 0.5s ease-in;
  
 }
 .icons{
@@ -30,30 +29,21 @@
     color: white;
 }
 #map_overlay{
-    height: 100vh;
+    height: 500px;
     width: 100vw;
-    position: absolute;
-    top: 0;
-
+    position: relative;
+    top: -90px;
     z-index: 0;
 }
 #home__overlay{
     position: relative;
-    top: -100px;
+    top: -70px;
     margin-bottom: 0;
     z-index: 1;
-    transition: all 0.5s ease-in;
 }
 .gmnoprint{
     visibility: hidden;
 }
 .gm-fullscreen-control{
     visibility: hidden;
-}
-
-/* Button Overlay */
-#showOverlayBtn {
-    position: absolute;
-    top: 58vh;
-    transition: all 0.5s ease-in;
 }
