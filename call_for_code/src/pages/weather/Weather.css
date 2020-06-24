@@ -32,7 +32,6 @@ svg{
 #map_overlay{
     height: 60vh;
     width: 100vw;
-    z-index: 0;
 }
 #content{
     display: flex;

@@ -8,13 +8,13 @@ import { arrowUp } from 'ionicons/icons';
 const Weather: React.FC = () => {
      return(
           <IonPage>
-          <IonHeader id="header">
-               <IonToolbar color="primary" >
-                    <IonButtons slot="end">
-                    <IonTitle id="title">Weather</IonTitle>
+          <IonHeader>
+          <IonToolbar color="primary">
+               <IonTitle>Weather</IonTitle>
+               <IonButtons slot="end">
                     <IonMenuButton />
-                    </IonButtons>
-               </IonToolbar>
+               </IonButtons>
+          </IonToolbar>
           </IonHeader>
 
           <IonContent id="content" >
