@@ -3,7 +3,7 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonToolbar, 
 import './Weather.css';
 import WeatherData from './weather_data.js';
 import CreateMap from './maps.js';
-import { arrowUp, arrowDown } from 'ionicons/icons';
+import { arrowUp } from 'ionicons/icons';
 
 const Weather: React.FC = () => {
      let overlayOn = true;
