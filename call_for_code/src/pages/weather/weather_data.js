@@ -22,6 +22,7 @@ class WeatherData extends React.Component {
           fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + localStorage.getItem('lat') + "&lon=" + localStorage.getItem('lon') + "&exclude=hourly,minutely&units=metric&appid=323064339112e50c196f2652093e2a60")
           .then(res => res.json())
           .then(resjson => this.setState({weather: resjson}))
+          localStorage.clear();
      }
      render(){
           
@@ -56,6 +57,7 @@ class Header extends React.Component{
                daily_high = +weather.daily[0].temp.max;
                daily_low = +weather.daily[0].temp.min;
                description = weather.current.weather[0].description;
+               console.log(weather.current.weather[0].main)
                if(typeof(description) === 'string'){
                     description = description.charAt(0).toUpperCase() + description.slice(1);
                }
