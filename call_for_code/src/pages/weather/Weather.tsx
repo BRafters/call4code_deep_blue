@@ -35,12 +35,13 @@ const Weather: React.FC = () => {
           <IonHeader>
           <IonToolbar color="primary">
                <IonButtons slot="end">
+               <IonTitle>Weather</IonTitle>
                <IonMenuButton />
                </IonButtons>
           </IonToolbar>
           </IonHeader>
 
-          <IonContent>
+          <IonContent id="content" >
                <div id="background-circle"></div>
                <section id="home__overlay">
                     <WeatherData /> 

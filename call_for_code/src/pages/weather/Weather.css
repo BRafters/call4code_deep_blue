@@ -10,19 +10,20 @@
      transition: all 0.5s ease-in;
  
 }
-.icons{
-    font-size: 5em;
-    color: white;
-}
-.temp_h1{
-    font-size: 2.5em;
-    font-weight: bold;
+svg{
+    font-size: 6em;
     color: white;
     margin-bottom: 0;
+}
+.temp_h1{
+    font-size: 3.3em;
+    color: white;
+    margin: 0 auto;
 }
 .high_low{
     color: white;
     margin: 0;
+    font-weight: lighter;
 }
 .temp_h2{
     margin-top: 0;
@@ -34,13 +35,28 @@
     width: 100vw;
     position: absolute;
     top: 0;
-
     z-index: 0;
 }
+#content{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    --offset-bottom: auto !important;
+    --overflow: hidden;
+    overflow: hidden;
+  
+}
+::-webkit-scrollbar {
+    display: none;
+}
 #home__overlay{
-    position: relative;
-    top: -100px;
-    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    height: 38vh;
     z-index: 1;
     transition: all 0.5s ease-in;
 }
