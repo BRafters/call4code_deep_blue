@@ -1,89 +1,16 @@
 import React from 'react';
-import { useParams } from 'react-router';
+
 import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonNav, IonItem, IonLabel, IonList } from '@ionic/react';
-import { sadOutline, compassOutline, fitnessOutline, heartOutline, personOutline, restaurantOutline, roseOutline, snowOutline, walkOutline } from 'ionicons/icons';
+import { arrowForward } from 'ionicons/icons';
+import data from '../../data.json';
+
 import './Survival.css';
+
 
 const Survival: React.FC = () => {
 
-     const items = [
-          {
-               icon: sadOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: compassOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: fitnessOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: heartOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: personOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: restaurantOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: restaurantOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: restaurantOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: restaurantOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: restaurantOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: restaurantOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: restaurantOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: restaurantOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: restaurantOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-          {
-               icon: restaurantOutline,
-               name: "Test Link",
-               color: "danger"
-          },
-     ]
-
+     const pageItems = data.survival;
+     
      return(
      <IonPage>
           <IonHeader>
@@ -96,18 +23,16 @@ const Survival: React.FC = () => {
           </IonHeader>
 
           <IonContent>
-
                {
-                    items.map((item, key) => { return(
-                         <IonItem button key={key}>
-                              <IonIcon icon={item.icon} color={item.color}></IonIcon>
-                              <IonLabel className="fonts"> {item.name} </IonLabel>
-                         </IonItem> 
+                    pageItems.map((item, key)=> {return(
+                         <IonItem button key={key} routerLink={"survival/"+item.link}>
+                              <IonLabel className="fonts"> {item.procedure} </IonLabel>
+                              <IonIcon icon={arrowForward}></IonIcon>
+                         </IonItem>
                     )})
                }
-     
-          </IonContent> 
-     </IonPage>
+               </IonContent>
+          </IonPage>
      );
 }
 

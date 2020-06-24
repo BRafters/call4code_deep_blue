@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router';
-import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonNav, IonItem, IonLabel, IonList } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonIcon} from '@ionic/react';
 import './Faq.css';
 
 const FaqSelected: React.FC = () => {
@@ -18,9 +18,8 @@ const FaqSelected: React.FC = () => {
           </IonHeader>
 
           <IonContent>
+               <IonIcon></IonIcon>
 
-
-     
           </IonContent> 
      </IonPage>
      );
