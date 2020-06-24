@@ -34,9 +34,9 @@ const Weather: React.FC = () => {
           <IonPage>
           <IonHeader>
           <IonToolbar color="primary">
-               <IonButtons slot="end">
                <IonTitle>Weather</IonTitle>
-               <IonMenuButton />
+               <IonButtons slot="end">
+                    <IonMenuButton />
                </IonButtons>
           </IonToolbar>
           </IonHeader>
