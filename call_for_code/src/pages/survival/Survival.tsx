@@ -5,6 +5,8 @@ import { arrowForward } from 'ionicons/icons';
 import data from '../../data.json';
 
 import './Survival.css';
+import '../general.css';
+
 
 
 const Survival: React.FC = () => {

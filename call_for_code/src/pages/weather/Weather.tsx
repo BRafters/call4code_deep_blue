@@ -3,6 +3,7 @@ import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonToolbar, 
 import './Weather.css';
 import WeatherData from './weather_data.js';
 import CreateMap from './maps.js';
+import '../general.css';
 import { arrowUp } from 'ionicons/icons';
 
 const Weather: React.FC = () => {
@@ -11,9 +12,9 @@ const Weather: React.FC = () => {
           <IonHeader id="header">
                <IonToolbar color="primary" >
                     <IonButtons slot="end">
-                    <IonTitle id="title">Weather</IonTitle>
                     <IonMenuButton />
                     </IonButtons>
+                    <IonTitle>Weather</IonTitle>
                </IonToolbar>
           </IonHeader>
 
