@@ -25,7 +25,7 @@ const FirstAid: React.FC = () => {
                     pageItems.map((item, key)=> {return(
                          <IonItem button key={key} routerLink={"firstaid/"+item.link}>
                               <IonLabel className="fonts"> {item.procedure} </IonLabel>
-                              <IonIcon icon={arrowForward}></IonIcon>
+                              {/* <IonIcon icon={arrowForward}></IonIcon> */}
                          </IonItem>
                     )})
                }
