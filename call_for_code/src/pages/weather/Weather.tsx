@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from 'react';
+import React from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonToolbar, IonFab, IonFabButton, IonIcon, IonTitle} from '@ionic/react';
 import './Weather.css';
 import WeatherData from './weather_data.js';
@@ -13,7 +13,7 @@ const Weather: React.FC = () => {
           let background = document.getElementById("background-circle");
           let button = document.getElementById("showOverlayBtn");
 
-          if (overlay != null && background != null && button != null) {
+          if (overlay !== null && background !== null && button !== null) {
                if (overlayOn) {
                     overlay.style.top = "-100vh";
                     background.style.top = "-100vh";
