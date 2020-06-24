@@ -43,9 +43,11 @@ const App: React.FC = () => {
 
   return (
     <IonApp>
+
       <IonReactRouter>
         <IonSplitPane contentId="main">
           <Menu />
+          
           <IonRouterOutlet id="main">
             <Route path="/page/:name" component={Page} exact />
 

@@ -1,12 +1,13 @@
 #background-circle {
      background: #0099FF;
-     Width: 140vw;
+     Width: 150vw;
      height: 80vh;
      border-radius: 100%;
      position: absolute;
-     top: -30vh;
-     left: -20vw;
+     top: -25vh;
+     left: -25%;
      z-index: 1;
+     transition: all 0.5s ease-in;
  
 }
 svg{
@@ -34,8 +35,10 @@ svg{
 
 }
 #map_overlay{
-    height: 60vh;
+    height: 100vh;
     width: 100vw;
+    position: absolute;
+    top: 0;
     z-index: 0;
     
 }
@@ -60,6 +63,7 @@ svg{
     margin: 0 auto;
     height: 38vh;
     z-index: 1;
+    transition: all 0.5s ease-in;
 }
 .gmnoprint{
     visibility: hidden;
@@ -67,12 +71,10 @@ svg{
 .gm-fullscreen-control{
     visibility: hidden;
 }
-
 #title{
     position: absolute;
     left: -390%;
 }
-
 @media only screen and (min-height: 360px){
     svg{
         font-size: 6em;
@@ -88,4 +90,10 @@ svg{
         position: relative;
         top: 25px;
     }
+}
+/* Button Overlay */
+#showOverlayBtn {
+    position: absolute;
+    top: 58vh;
+    transition: all 0.5s ease-in;
 }
