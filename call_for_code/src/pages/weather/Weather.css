@@ -13,26 +13,31 @@ svg{
     font-size: 5em;
     color: white;
     margin-bottom: 0;
+
 }
 .temp_h1{
     font-size: 3.3em;
     color: white;
     margin: 0 auto;
+
 }
 .high_low{
     color: white;
     margin: 0;
     font-weight: lighter;
+
 }
 .temp_h2{
     margin-top: 0;
     margin-bottom: 35px;
     color: white;
+
 }
 #map_overlay{
     height: 60vh;
     width: 100vw;
     z-index: 0;
+    
 }
 #content{
     display:flex;
