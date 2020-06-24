@@ -33,6 +33,8 @@ svg{
 #map_overlay{
     height: 100vh;
     width: 100vw;
+    display: absolute;
+    top: 0;
 }
 #content{
     display:flex;
@@ -53,9 +55,9 @@ svg{
     justify-content: flex-end;
     align-items: center;
     margin: 0 auto;
-    height: 38vh;
-    z-index: 1;
+    width: 100vw;
     transition: all 0.5s ease-in;
+    position: absolute;
 }
 .gmnoprint{
     visibility: hidden;

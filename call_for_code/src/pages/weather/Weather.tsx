@@ -21,7 +21,7 @@ const Weather: React.FC = () => {
                     button.style.transform = "rotate(180deg)"
                     overlayOn = false;
                } else {
-                    overlay.style.top = "-10vh";
+                    overlay.style.top = "0";
                     background.style.top = "-25vh";
                     button.style.top = "58vh";
                     button.style.transform = "rotate(0deg)"
