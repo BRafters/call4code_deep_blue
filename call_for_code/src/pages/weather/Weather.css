@@ -11,7 +11,7 @@
  
 }
 svg{
-    font-size: 6em;
+    font-size: 5em;
     color: white;
     margin-bottom: 0;
 }
@@ -70,7 +70,22 @@ svg{
     position: absolute;
     left: -390%;
 }
-
+@media only screen and (min-height: 360px){
+    svg{
+        font-size: 6em;
+        color: white;
+        margin-bottom: 0;
+    }
+    .temp_h1{
+        font-size: 2.5em;
+        color: white;
+        margin: 0 auto;
+    }
+    #home__overlay{
+        position: relative;
+        top: 25px;
+    }
+}
 /* Button Overlay */
 #showOverlayBtn {
     position: absolute;
