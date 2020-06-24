@@ -7,13 +7,13 @@ import CreateMap from './maps.js';
 const Weather: React.FC = () => {
      return(
           <IonPage>
-          <IonHeader>
-          <IonToolbar color="primary">
-               <IonButtons slot="end">
-               <IonTitle>Weather</IonTitle>
-               <IonMenuButton />
-               </IonButtons>
-          </IonToolbar>
+          <IonHeader id="header">
+               <IonToolbar color="primary" >
+                    <IonButtons slot="end">
+                    <IonTitle id="title">Weather</IonTitle>
+                    <IonMenuButton />
+                    </IonButtons>
+               </IonToolbar>
           </IonHeader>
 
           <IonContent id="content" >
