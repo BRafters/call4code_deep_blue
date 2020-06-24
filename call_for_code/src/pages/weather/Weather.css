@@ -63,6 +63,11 @@ svg{
     visibility: hidden;
 }
 
+#title{
+    position: absolute;
+    left: -390%;
+}
+
 @media only screen and (min-height: 360px){
     svg{
         font-size: 6em;
