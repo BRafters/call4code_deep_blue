@@ -1,13 +1,12 @@
 #background-circle {
      background: #0099FF;
-     Width: 150vw;
+     Width: 140vw;
      height: 80vh;
      border-radius: 100%;
      position: absolute;
-     top: -25vh;
-     left: -25%;
+     top: -30vh;
+     left: -20vw;
      z-index: 1;
-     transition: all 0.5s ease-in;
  
 }
 svg{
@@ -35,15 +34,11 @@ svg{
 
 }
 #map_overlay{
-    height: 100vh;
+    height: 60vh;
     width: 100vw;
-    position: absolute;
-    top: 0;
-    z-index: 0;
-    
 }
 #content{
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -58,22 +53,17 @@ svg{
 #home__overlay{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     height: 38vh;
     z-index: 1;
-    transition: all 0.5s ease-in;
 }
 .gmnoprint{
     visibility: hidden;
 }
 .gm-fullscreen-control{
     visibility: hidden;
-}
-#title{
-    position: absolute;
-    left: -390%;
 }
 @media only screen and (min-height: 360px){
     svg{
@@ -91,9 +81,9 @@ svg{
         top: 25px;
     }
 }
-/* Button Overlay */
+/* Button Overlay
 #showOverlayBtn {
     position: absolute;
     top: 58vh;
     transition: all 0.5s ease-in;
-}
+} */

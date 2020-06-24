@@ -5,26 +5,21 @@ const DetermineWeather = (props) => {
      switch(props.current_weather){
           case "Rain":
                return <WiRain />;
-               break;
           case "Drizzle":
+               return <WiSprinkle />;
           case "Mist":
                return <WiSprinkle />;
-               break;
           case "Thunderstorm":
                return <WiThunderstorm />;
-               break;
           case "Fog":
                return <WiFog />;
-               break;
           case "Snow":
                return <WiSnow />;
-               break;
           case "Clear":
                return <WiDaySunny />;
-               break;
           case "Clouds":
                return <WiCloud />;
-               break;
+          default: return "";
      }
 }
 
