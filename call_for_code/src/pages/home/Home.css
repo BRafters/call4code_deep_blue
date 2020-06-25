@@ -14,7 +14,8 @@
 #home__overlay {
     margin: 30% 0;
     text-align: center;
-    position: relative;
+    width: 100%;
+    position: absolute;
     z-index: 10;
 }
 

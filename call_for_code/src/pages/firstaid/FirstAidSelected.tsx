@@ -9,9 +9,9 @@ const FirstAidSelected: React.FC = () => {
      
     const { name } = useParams<{ name: string; }>();
 
-    const pageData = data.firstaid;
+    const page = data.firstaid;
 
-    const item:any = pageData.find(item => item.link === name);
+    const item:any = page.find(item => item.link === name);
 
      return(
           <IonPage>

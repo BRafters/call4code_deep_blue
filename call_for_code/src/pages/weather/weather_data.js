@@ -39,9 +39,6 @@ class WeatherData extends React.Component {
      }
 }
 class Header extends React.Component{
-     constructor(props){
-          super(props);
-     }
 
      render(){
           const weather = this.props.curr_weather;

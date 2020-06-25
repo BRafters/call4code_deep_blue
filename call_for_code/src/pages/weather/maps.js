@@ -17,8 +17,10 @@ const container_size = {
 var coords = {lat: +localStorage.getItem('lat'), lng: +localStorage.getItem('lon')}
 
 function CreateMap(){
+     // eslint-disable-next-line
      const [map, setMap] = React.useState(null);
      const onload = React.useCallback(function callback(map){
+          // eslint-disable-next-line
           const map_bounds = new window.google.maps.LatLngBounds();
           map.position = coords;
           // map.fitBounds(map_bounds);

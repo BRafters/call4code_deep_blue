@@ -1,0 +1,9 @@
+.fonts{
+    font-size: 16px!important;
+    padding: 10px 10px;
+    margin-left: 10px;
+    word-wrap: normal;
+    display: inline;
+    white-space: normal!important;
+    overflow: visible!important;
+}
