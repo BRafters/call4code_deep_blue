@@ -46,12 +46,6 @@ const appPages: AppPage[] = [
     iosIcon: pulseOutline,
     mdIcon: pulseSharp
   },
-  // {
-  //   title: 'Assistant',
-  //   url: '/assistant',
-  //   iosIcon: chatboxOutline,
-  //   mdIcon: chatboxSharp
-  // },
   {
     title: 'Local Weather',
     url: '/weather',
