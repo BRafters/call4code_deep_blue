@@ -5,7 +5,6 @@ import WeatherData from './weather_data.js';
 import CreateMap from './maps.js';
 import './Weather.css';
 import '../general.css';
-import { arrowUp } from 'ionicons/icons';
 
 const Weather: React.FC = () => {
      let overlayOn = true;
