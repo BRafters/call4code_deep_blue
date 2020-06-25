@@ -81,61 +81,90 @@
         {
             "id": 0,
             "link": "water",
-            "category": "Water purification/filtration",
+            "category": "Water Purification",
             "methods": [
-                {"name":"Sun Purification",
-                "steps": [
-                    "Place water in a clear container (preferably glass) and let sit in full sunlight for five hours.", 
-                    "Pros: relatively easy to do", 
-                    "Cons: requires direct sunlight, weather or location may render this method ineffective. Have a backup method ready."
-                    ]},
-                {"name":"Boil",
-                "steps": [
-                    "Heat the water to a heavy, roiling boil for at least 5-10 minutes.", 
-                    "Pros: Effective for protecting against water pathogens(bacteria and virus)",
-                    "Cons: Requires capability to generate fire, conditions may not permit that"]},
-                {"name":"Active Carbon Filtration",
-                "steps": [
-                    "Run water through activated carbon",
-                    "Make activated carbon by putting wood chunks into an airtight metal container", 
-                    "Place container on a slow burning fire",
-                    "Without oxygen, the wood will not burn and produce activated carbon.",
-                    "Pros: filters excess minerals and material contaminants", 
-                    "Cons: this method doesn't filter virus or bacteria contaminants"]},
-                {"name":"Hole dig",
-                "steps": [
-                    "Dig a hole a couple meters, or few feet, from the water source",
-                    "The water will slowly fill into the hole through the soil",
-                    "The soil will provide a primitive filter, microorganisms in soil will feed on potential pathogens in the water",
-                    "If murky, it will still be murky, but there will be an improvement",
-                    "Pros: Simple method, doesn't require tools or any other processes",
-                    "Cons: May not fully remove contaminants"
-                ]},
-                {"name":"Solar Still",
-                "steps":[
-                    "Dig a hole in the ground",
-                    "Place moist vegetation in the hole",
-                    "place a water catching container in center",
-                    "Cover hole with a tarp, anchor it with rocks or any weighted object around the edges. Allow for a slight amount of droop in tarp over the water catching container",
-                    "Let the Solar Still sit for 24-48 hours. Water will evaporate and condense on the tarp, dripping down into the container.",
-                    "Pros: Produces pure, safe water. Doesn't require heavy interaction after establishing the still. Can be run continuously without monitoring",
-                    "Cons: Requires a tarp. There is a 1-2 day wait for safe water, important to establish early in survival scenario."
-                ]
+                {
+                    "name": "Sun Purification",
+                    "steps": [
+                        "Place water in a clear container (preferably glass) and let sit in full sunlight for five hours.",
+                        "Pros: relatively easy to do",
+                        "Cons: requires direct sunlight, weather or location may render this method ineffective. Have a backup method ready."
+                    ]
+                },{
+                    "name": "Boil",
+                    "steps": [
+                        "Heat the water to a heavy, roiling boil for at least 5-10 minutes.",
+                        "Pros: Effective for protecting against water pathogens(bacteria and virus)",
+                        "Cons: Requires capability to generate fire, conditions may not permit that"
+                    ]
+                },{
+                    "name": "Active Carbon Filtration",
+                    "steps": [
+                        "Run water through activated carbon",
+                        "Make activated carbon by putting wood chunks into an airtight metal container",
+                        "Place container on a slow burning fire",
+                        "Without oxygen, the wood will not burn and produce activated carbon.",
+                        "Pros: filters excess minerals and material contaminants",
+                        "Cons: this method doesn't filter virus or bacteria contaminants"
+                    ]
+                },{
+                    "name": "Hole dig",
+                    "steps": [
+                        "Dig a hole a couple meters, or few feet, from the water source",
+                        "The water will slowly fill into the hole through the soil",
+                        "The soil will provide a primitive filter, microorganisms in soil will feed on potential pathogens in the water",
+                        "If murky, it will still be murky, but there will be an improvement",
+                        "Pros: Simple method, doesn't require tools or any other processes",
+                        "Cons: May not fully remove contaminants"
+                    ]
+                },{
+                    "name": "Solar Still",
+                    "steps": [
+                        "Dig a hole in the ground",
+                        "Place moist vegetation in the hole",
+                        "place a water catching container in center",
+                        "Cover hole with a tarp, anchor it with rocks or any weighted object around the edges. Allow for a slight amount of droop in tarp over the water catching container",
+                        "Let the Solar Still sit for 24-48 hours. Water will evaporate and condense on the tarp, dripping down into the container.",
+                        "Pros: Produces pure, safe water. Doesn't require heavy interaction after establishing the still. Can be run continuously without monitoring",
+                        "Cons: Requires a tarp. There is a 1-2 day wait for safe water, important to establish early in survival scenario."
+                    ]
                 }
             ]
         },
         {
             "id": 1,
             "link": "distress",
-            "category": "Visual Distress signals - requesting rescue at a distance",
-            "methods": [{"name":"Rocket/Shells","steps":["Fires red stars one at a time at short intervals"]},
-                {"name":"Smoke","steps":["Orange coloured smoke is internationally recognized as a sign of distress"]},
-                {"name":"Arm raises","steps":["Extend arms out to each side, slowly and repeatedly raise and lower arms."]},
-                {"name":"Flag Symbol","steps":["An orange flag, tarp, or fabric with a black V or a black square and circle on it"]},
-                {"name":"Square and ball","steps":["A black square flag or piece of fabric hanging above or below a black ball, or anything resembling a ball"]},
-                {"name":"SOS","steps":["Can be signalled with sound or light: 3 short pulses, 3 long, 3 short.", "Writing SOS in large letters on roof or clear area is also recognized", "A radio message consisting of the word 'mayday'"]},
-                {"name":"Gunshot or loud noise","steps":["A gunshot or other loud noise (Airhorn, bell, whistle, etc) at 1 minute intervals"]}
-            ]   
+            "category": "Visual Distress Signals",
+            "subtitle": "Requesting rescue at a distance",
+            "methods": [{
+                    "name": "Rocket/Shells",
+                    "steps": ["Fires red stars one at a time at short intervals"]
+                },
+                {
+                    "name": "Smoke",
+                    "steps": ["Orange coloured smoke is internationally recognized as a sign of distress"]
+                },
+                {
+                    "name": "Arm raises",
+                    "steps": ["Extend arms out to each side, slowly and repeatedly raise and lower arms."]
+                },
+                {
+                    "name": "Flag Symbol",
+                    "steps": ["An orange flag, tarp, or fabric with a black V or a black square and circle on it"]
+                },
+                {
+                    "name": "Square and ball",
+                    "steps": ["A black square flag or piece of fabric hanging above or below a black ball, or anything resembling a ball"]
+                },
+                {
+                    "name": "SOS",
+                    "steps": ["Can be signalled with sound or light: 3 short pulses, 3 long, 3 short.", "Writing SOS in large letters on roof or clear area is also recognized", "A radio message consisting of the word 'mayday'"]
+                },
+                {
+                    "name": "Gunshot or loud noise",
+                    "steps": ["A gunshot or other loud noise (Airhorn, bell, whistle, etc) at 1 minute intervals"]
+                }
+            ]
 
         }
     ]

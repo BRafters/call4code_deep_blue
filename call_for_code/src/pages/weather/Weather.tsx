@@ -1,16 +1,16 @@
 import React from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonToolbar, IonFab, IonFabButton, IonIcon, IonTitle} from '@ionic/react';
-import './Weather.css';
+import { arrowUp } from 'ionicons/icons';
 import WeatherData from './weather_data.js';
 import CreateMap from './maps.js';
-import { arrowUp } from 'ionicons/icons';
+import './Weather.css';
 
 const Weather: React.FC = () => {
      let overlayOn = true;
 
      function moveOverlay() {
-          let overlay = document.getElementById("home__overlay");
-          let background = document.getElementById("background-circle");
+          let overlay = document.getElementById("weather__overlay");
+          let background = document.getElementById("weather__background-circle");
           let button = document.getElementById("showOverlayBtn");
 
           if (overlay !== null && background !== null && button !== null) {
@@ -42,8 +42,8 @@ const Weather: React.FC = () => {
           </IonHeader>
 
           <IonContent id="content" >
-               <div id="background-circle"></div>
-               <section id="home__overlay">
+               <div id="weather__background-circle"></div>
+               <section id="weather__overlay">
                     <WeatherData /> 
                </section>
                <IonFab id="showOverlayBtn" horizontal="center" slot="fixed">

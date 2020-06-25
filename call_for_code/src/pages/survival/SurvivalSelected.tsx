@@ -8,9 +8,9 @@ const SurvivalSelected: React.FC = () => {
      
     const { name } = useParams<{ name: string; }>();
 
-    const pageData = data.survival;
+    const page = data.survival;
 
-    const item:any = pageData.find(item => item.link === name);
+    const item:any = page.find(item => item.link === name);
 
      return(
           <IonPage>
@@ -22,29 +22,38 @@ const SurvivalSelected: React.FC = () => {
                     <IonButtons slot="end">
                     <IonMenuButton />
                     </IonButtons>
-                    <IonTitle> {item.procedure} </IonTitle>
+                    <IonTitle> {item.category} </IonTitle>
                </IonToolbar>
                </IonHeader>
 
                <IonContent>
-                    <IonCard>
-                         <IonCardHeader>
-                              <IonCardTitle>Steps</IonCardTitle>
-                         </IonCardHeader>
-                         <IonCardContent>
-                              <IonList>
-                              {
-                                   item.steps.map((step: string, index: number) => {
-                                   return(
-                                        <IonItem key={index}>
-                                             {step}
-                                        </IonItem>
-                                   )})
-                              }
-                              </IonList>
-                         </IonCardContent>    
-                    </IonCard>
-
+                    <div>
+                    {
+                         item.methods.map((method: any, index: number) => {
+                              return (
+                                   <IonCard>
+                                        <IonCardHeader>
+                                             <IonCardTitle>{method.name}</IonCardTitle>
+                                        </IonCardHeader>
+                                        <IonCardContent>
+                                             <IonList> 
+                                                  {
+                                                       method.steps.map((step: string, key: number) => {
+                                                            return (                                  
+                                                                 <IonItem key={key}>
+                                                                      {step}
+                                                                 </IonItem>
+                                                            );
+                                                       })
+                                                  }
+                                             </IonList>
+                                        </IonCardContent>    
+                                   </IonCard>
+                              )
+    
+                         })
+                    }
+                    </div>
                </IonContent> 
           </IonPage>
      );

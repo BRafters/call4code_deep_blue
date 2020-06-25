@@ -1,4 +1,4 @@
-#background-circle {
+#weather__background-circle {
      background: #0099FF;
      Width: 150vw;
      height: 80vh;
@@ -49,15 +49,16 @@ svg{
 ::-webkit-scrollbar {
     display: none;
 }
-#home__overlay{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0 auto;
+#weather__overlay{
+    text-align: center;
     width: 100vw;
-    transition: all 0.5s ease-in;
+
+    
     position: absolute;
+    top: 25px;
+    z-index: 10;
+
+    transition: all 0.5s ease-in;
 }
 .gmnoprint{
     visibility: hidden;
