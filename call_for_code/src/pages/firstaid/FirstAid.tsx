@@ -3,6 +3,7 @@ import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, Ion
 import { arrowForward } from 'ionicons/icons';
 import data from '../../data.json';
 import './FirstAid.css';
+import '../general.css';
 
 
 const FirstAid: React.FC = () => {

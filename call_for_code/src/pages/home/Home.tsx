@@ -2,6 +2,7 @@ import React from 'react';
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonIcon, IonChip, IonLabel} from '@ionic/react';
 import { alertCircleOutline } from 'ionicons/icons';
 import './Home.css';
+import '../general.css';
 
 const Home: React.FC = () => {
      
