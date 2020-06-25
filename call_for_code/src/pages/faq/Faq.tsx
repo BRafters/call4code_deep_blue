@@ -1,41 +1,36 @@
 import React from 'react';
-import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonItem, IonLabel } from '@ionic/react';
-import { helpOutline } from 'ionicons/icons';
+import { IonButtons, IonContent, IonHeader, IonIcon, IonMenuButton, IonPage, IonTitle, IonToolbar, IonNav, IonItem, IonLabel } from '@ionic/react';
+import { arrowForward } from 'ionicons/icons';
+import data from '../../data.json';
 import './Faq.css';
+
 
 const Faq: React.FC = () => {
 
-     const items = [
-          {
-               question: "Does this thing work?",
-               answer: "Yes"
-          }
-     ]
-
+     const pageItems = data.faq;
+     
      return(
-     <IonPage>
-          <IonHeader>
-          <IonToolbar color="primary">
-               <IonButtons slot="end">
-               <IonMenuButton />
-               </IonButtons>
-               <IonTitle>FAQ</IonTitle>
-          </IonToolbar>
-          </IonHeader>
+          <IonPage>
+               <IonHeader>
+               <IonToolbar color="primary">
+                    <IonButtons slot="end">
+                    <IonMenuButton />
+                    </IonButtons>
+                    <IonTitle>FAQ</IonTitle>
+               </IonToolbar>
+               </IonHeader>
 
-          <IonContent>
-
+               <IonContent>
                {
-                    items.map((item, key) => { return(
-                         <IonItem button key={key}>
-                              <IonIcon icon={helpOutline} color="dark"></IonIcon>
+                    pageItems.map((item, key)=> {return(
+                         <IonItem button key={key} routerLink={"faq/"+item.link}>
                               <IonLabel className="fonts"> {item.question} </IonLabel>
-                         </IonItem> 
+                              <IonIcon icon={arrowForward}></IonIcon>
+                         </IonItem>
                     )})
                }
-     
-          </IonContent> 
-     </IonPage>
+               </IonContent> 
+          </IonPage>
      );
 }
 
